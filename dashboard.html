@@ -17,7 +17,7 @@
                     <a class="brand-logo">E-Wallet</a>
                   <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a class="waves-effect waves-light btn modal-trigger" href="#sendmodal">Send</a></li>
-                    <li><button class="btn">Receive</button></li>
+                    
                     <li><button class="btn" id="logout">Logout</button></li>
                   </ul>
                 </div>
@@ -30,6 +30,22 @@
                 <h2>Balance: <span id="balance"></span></h2>
             </div>
         </div>
+        <div class="container">
+            <h4 style="text-align: center; background-color: rgb(202, 158, 165); padding: 10px; color: aliceblue;">Recent transactions</h4>
+            <table class="striped">
+                <thead>
+                  <tr>
+                      <th>Type</th>
+                      <th>Amount</th>
+                      <th>Time</th>
+                  </tr>
+                </thead>
+        
+                <tbody class="table-body">
+                  <!-- // Data will be rendered here -->
+                </tbody>
+              </table>
+        </div>
     </div>
 
     <div id="sendmodal" class="modal">
@@ -39,6 +55,7 @@
     
             <label for="rec_email">Recipient's email</label>
             <input type="text" id="rec_email">
+            <p id="feedback" style="color: green;"></p>
     
             <label for="amount">Amount</label>
             <input type="text" id="amount">
@@ -48,10 +65,11 @@
         </form>
         </div>
         <div class="modal-footer">
-          <a href="#!" class="modal-close waves-effect waves-green btn-flat" id="sendBtn">Send</a>
+          <a href="#!" class="waves-effect waves-green btn-flat" id="sendBtn">Send</a>
         </div>
     </div>
 
+    <script src="https://momentjs.com/downloads/moment.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
@@ -60,5 +78,6 @@
     <script src="./js/dashboard.js"></script>
     <script src="./js/logout.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/transactions.js"></script>
 </body>
 </html>
